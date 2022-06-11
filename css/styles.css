@@ -18,17 +18,13 @@ body {
 
 }
 
-.under-line {
-    background-color: rgba(236, 236, 236, 1);
-    height: 1px;
-}
-
 .header {
     font-weight: 500;
     font-size: 14px;
     line-height: 1.14;
     letter-spacing: 0.02em;
     text-decoration: none;
+    border-bottom: 1px solid #ECECEC;
 }
 
 
@@ -110,7 +106,7 @@ body {
 
 .overlay {
     max-width: 1600px;
-    height: 600px;
+    /* height: 600px; */
     margin-left: auto;
     margin-right: auto;
     background: #C4C4C4;
@@ -178,7 +174,7 @@ body {
     width: 1200px;
     padding-left: 15px;
     padding-right: 15px;
-    /* outline: 2px solid tomato; */
+    outline: 2px solid tomato; 
 }
 
 .section {
@@ -251,6 +247,7 @@ ul {
 
 .feature-list p {
     margin-top: 0;
+    margin-bottom: 0;
     font-size: 14px;
     line-height: 1.71;
 
@@ -336,23 +333,42 @@ ul {
 
 .clients {
     display: flex;
-    justify-content: space-between;
+    /* justify-content: space-between; */
+}
+
+.client:first-child {
+    margin-left: 0;
+}
+
+.client {
+    margin-left: 30px;
 }
 
 
-/* .client-button {
+.client-link {
     width: 170px;
     height: 92px;
-    left: 215px;
-    top: 2493px;
     border: 1px solid #AFB1B8;
     border-radius: 4px;
+    display: flex;
     background-color: var(--primary-white-color);
-    display: block;
+    align-items: center;
+    justify-content: center;
+    color: #AFB1B8;
     cursor: pointer;
 }
 
-.client:hover,
+.clients-icon {
+    fill: currentColor;
+}
+
+.client-link:hover,
+.client-link:focus {
+    color: var(--accent-color);
+    border: 1px solid var(--accent-color);
+}
+
+/* .client:hover,
 .client:focus {
     border-color: var(--accent-color);
 
@@ -421,13 +437,13 @@ address {
     display: flex;
     justify-content: center;
     margin-bottom: 50px;
-    text-align: center;
+    /* text-align: center; */
 }
 
 .filter-button-portfolio {
     background-color: var(--secondary-dackground-color);
     color: var(--title-text-color);
-    font-family: 'Roboto';
+    font-family: inherit;
     font-weight: 500;
     font-size: 16px;
     line-height: 1.63;
@@ -437,7 +453,7 @@ address {
     min-width: 73px;
     height: 38px;
     padding: 6px 22px;
-    border: none;
+    border: 0;
 }
 
 .filter-button .list-button-portfolio + .list-button-portfolio {
@@ -448,12 +464,11 @@ address {
 .filter-button-portfolio:focus {
     color: var(--primary-white-color);
     background-color: var(--accent-color);
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
 .content h2 {
-    margin-top: 20px;
     margin-bottom: 4px;
-    margin-left: 24px;
 
     color: var(--title-text-color);
     font-weight: 700;
@@ -462,12 +477,13 @@ address {
     letter-spacing: 0.06em;
 }
 .list-content .text {
-    margin-top: 0px;
+    /* margin-top: 0px;
     margin-bottom: 20px;
-    margin-left: 24px;
+    margin-left: 24px; */
 
     font-size: 16px;
     line-height: 1.9;
+    color: var(--primary-text-color);
 }
 
 .content {
@@ -480,8 +496,9 @@ address {
 .list-content {
     cursor: pointer;
     margin: 15px;
-    width: 370px;
-    border: 1px solid rgba(238, 238, 238, 1);
+    /* width: 370px; */
+    /* border: 1px solid rgba(238, 238, 238, 1); */
+    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .list-content:hover,
@@ -493,13 +510,25 @@ address {
 
 .content-section {
     position: relative;
+    overflow: hidden;
 }
 
-.text-content {
+.content-section img {
+    display: block;
+}
+
+
+.link-kontent {
+    text-decoration: none;
+}
+
+.text-overlay {
     background-color: rgba(33, 150, 243, 0.9);
     color: var(--primary-white-color);
-    width: 370px;
-    height: 294px;
+    /* width: 370px;
+    height: 294px; */
+    width: 100%;
+    height: 100%;
     font-size: 18px;
     line-height: 1.6;
     margin-top: 0px;
@@ -508,14 +537,35 @@ address {
     padding: 63px 24px;
 
     top: 0;
-    right: 0;
+    left: 0;
+    /* right: 0; */
     position: absolute;
     opacity: 0;
+    overflow: auto;
+    transform: translateY(100%);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), background 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.content-section:hover .text-content {
+/* ПОДСМОТРЕННО */
+
+/* .link-content:hover .overlay,
+.link-content:focus .overlay {
+    transform: translateY(0%);
+    background: rgba(33, 150, 243, 0.9);
+} */
+
+/* .content-section:hover .text-content {
     opacity: 1;
+} */
+
+.text-card {
+    padding: 20px 24px;
+    background: #ffffff;
+    border-bottom: 1px solid #eeeeee;
+    border-right: 1px solid #eeeeee;
+    border-left: 1px solid #eeeeee;
 }
+
 
 
 /* акцент #2196F3 */
