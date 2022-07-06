@@ -423,7 +423,6 @@ ul {
 
 .clients {
     display: flex;
-    /* justify-content: space-between; */
 }
 
 .client:first-child {
@@ -459,16 +458,6 @@ ul {
 .clients-icon {
     fill: currentColor;
 }
-
-/* .client:hover,
-.client:focus {
-    border-color: var(--accent-color);
-
-}
-
-.client img {
-    padding: 16px 32px;
-} */
 
 
 /* FOOTER */
